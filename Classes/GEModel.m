@@ -42,7 +42,7 @@
 {
 	if (self = [super init])
 	{
-		locationManager = [[[CLLocationManager alloc] init] autorelease];
+		locationManager = [[CLLocationManager alloc] init];
 		locationManager.delegate = self;
 		locationManager.distanceFilter = kCLDistanceFilterNone;
 		locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
@@ -113,35 +113,17 @@
 {
 	for (NSDictionary* hint in hints) {
 		NSDictionary* geoPosition = [hint objectForKey:@"geo_position"];
-		CGPoint hintPosition = { 
-			[[geoPosition objectForKey:@"longitude"] doubleValue],
-			[[geoPosition objectForKey:@"latitude"] doubleValue]
-		};
-		CGPoint currentPosition = {
-			currentLocation.coordinate.longitude,
-			currentLocation.coordinate.latitude
-		};
-		[hint setValue:[NSNumber numberWithFloat:[self distanceOnEarthBetween:currentPosition and:hintPosition]] 
+        CLLocation* hintPosition = [[CLLocation alloc] initWithLatitude:[[geoPosition objectForKey:@"latitude"] doubleValue]
+                                                              longitude:[[geoPosition objectForKey:@"longitude"] doubleValue]];
+
+		[hint setValue:[NSNumber numberWithDouble: [currentLocation distanceFromLocation:hintPosition]]
 										  forKey:@"distance"];
+        [hintPosition release];
 	}
 }
 -(NSArray*)sortByDistance:(NSArray*)hints
 {
-	NSSortDescriptor* sortByDistance = [NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:YES];
+	NSSortDescriptor* sortByDistance = [NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:YES    ];
 	return [hints sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortByDistance]];
-}
--(double)distanceOnEarthBetween:(CGPoint)origin and:(CGPoint)destination
-{
-	double radium = 6371;
-	double dLat = ToRad(destination.y - origin.y);
-	double dLon = ToRad(destination.x - origin.x);
-	
-	double rLatOrig = ToRad(origin.y);
-	double rLatDest = ToRad(destination.y);
-	
-	double a = sin(dLat/2) * sin(dLat/2) +
-				sin(dLon/2) * sin(dLon/2) * cos(rLatOrig) * cos(rLatDest);
-	double c = 2 * atan2(sqrt(a), sqrt(1-a));
-	return c * (double)radium;
 }
 @end
