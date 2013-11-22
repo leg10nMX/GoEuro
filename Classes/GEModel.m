@@ -18,7 +18,7 @@
 -(void)calculateDistanceForHintArray:(NSArray*)hints;
 -(void)getHintFor:(NSString*)query withCallback:(SEL)callback;
 -(NSArray*)sortByDistance:(NSArray*)hints;
--(CGFloat)distanceOnEarthBetween:(CGPoint)origin and:(CGPoint)destination;
+-(double)distanceOnEarthBetween:(CGPoint)origin and:(CGPoint)destination;
 @end
 
 
@@ -85,13 +85,15 @@
 }
 -(void) originHintsReceived:(NSDictionary *)hints
 {
-    self.originHints = [self sortByDistance:[hints objectForKey:@"results"]];
+    self.originHints = [hints objectForKey:@"results"];
 	[self calculateDistanceForHintArray:self.originHints];
+    self.originHints = [self sortByDistance:self.originHints];
 }
 -(void) destinationHintsReceived:(NSDictionary *)hints
 {
-    self.destinationHints = [self sortByDistance:[hints objectForKey:@"results"]];
+    self.destinationHints = [hints objectForKey:@"results"];
 	[self calculateDistanceForHintArray:self.destinationHints];
+    self.destinationHints = [self sortByDistance:self.destinationHints];
 }
 -(void)locationManager:(CLLocationManager*)manager didUpdateToLocation:(CLLocation*)newLocation fromLocation:(CLLocation*)oldLocation
 {
@@ -112,8 +114,8 @@
 	for (NSDictionary* hint in hints) {
 		NSDictionary* geoPosition = [hint objectForKey:@"geo_position"];
 		CGPoint hintPosition = { 
-			[[geoPosition objectForKey:@"longitude"] floatValue],
-			[[geoPosition objectForKey:@"latitude"] floatValue]
+			[[geoPosition objectForKey:@"longitude"] doubleValue],
+			[[geoPosition objectForKey:@"latitude"] doubleValue]
 		};
 		CGPoint currentPosition = {
 			currentLocation.coordinate.longitude,
@@ -128,18 +130,18 @@
 	NSSortDescriptor* sortByDistance = [NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:YES];
 	return [hints sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortByDistance]];
 }
--(CGFloat)distanceOnEarthBetween:(CGPoint)origin and:(CGPoint)destination
+-(double)distanceOnEarthBetween:(CGPoint)origin and:(CGPoint)destination
 {
-	float radium = 6371;
-	float dLat = ToRad(destination.y - origin.y);
-	float dLon = ToRad(destination.x - origin.x);
+	double radium = 6371;
+	double dLat = ToRad(destination.y - origin.y);
+	double dLon = ToRad(destination.x - origin.x);
 	
-	float rLatOrig = ToRad(origin.y);
-	float rLatDest = ToRad(destination.y);
+	double rLatOrig = ToRad(origin.y);
+	double rLatDest = ToRad(destination.y);
 	
-	float a = sin(dLat/2) * sin(dLat/2) +
+	double a = sin(dLat/2) * sin(dLat/2) +
 				sin(dLon/2) * sin(dLon/2) * cos(rLatOrig) * cos(rLatDest);
-	float c = 2 * atan2(sqrt(a), sqrt(1-a));
-	return c * (float)radium;
+	double c = 2 * atan2(sqrt(a), sqrt(1-a));
+	return c * (double)radium;
 }
 @end
