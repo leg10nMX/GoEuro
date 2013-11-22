@@ -123,7 +123,7 @@
 }
 -(NSArray*)sortByDistance:(NSArray*)hints
 {
-	NSSortDescriptor* sortByDistance = [NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:YES    ];
+	NSSortDescriptor* sortByDistance = [NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:YES];
 	return [hints sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortByDistance]];
 }
 @end
