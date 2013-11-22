@@ -1,0 +1,246 @@
+// !$*UTF8*$!
+{
+	1D3623250D0F684500981E51 /* GoEuroAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1157}}";
+			sepNavSelRange = "{1637, 0}";
+			sepNavVisRange = "{1636, 1063}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* GoEuro */ = {
+		activeExec = 0;
+		executables = (
+			9D723C60183E78570020D12D /* GoEuro */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* GoEuroViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {936, 841}}";
+			sepNavSelRange = "{479, 20}";
+			sepNavVisRange = "{0, 979}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* GoEuroViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {936, 1989}}";
+			sepNavSelRange = "{2907, 0}";
+			sepNavVisRange = "{1879, 1686}";
+			sepNavWindowFrame = "{{61, 175}, {1101, 836}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 9D723C60183E78570020D12D /* GoEuro */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* GoEuro */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* GoEuro */,
+		);
+		codeSenseManager = 9D723C6D183E78760020D12D /* Code sense */;
+		executables = (
+			9D723C60183E78570020D12D /* GoEuro */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					758,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 406759620;
+			PBXWorkspaceStateSaveDate = 406759620;
+		};
+		perUserProjectItems = {
+			9D723DA9183EBD4E0020D12D /* PBXTextBookmark */ = 9D723DA9183EBD4E0020D12D /* PBXTextBookmark */;
+			9D723DAB183EBD4E0020D12D /* PBXTextBookmark */ = 9D723DAB183EBD4E0020D12D /* PBXTextBookmark */;
+			9D723DAC183EBD4E0020D12D /* PBXTextBookmark */ = 9D723DAC183EBD4E0020D12D /* PBXTextBookmark */;
+			9D723DD2183ED15F0020D12D /* PBXTextBookmark */ = 9D723DD2183ED15F0020D12D /* PBXTextBookmark */;
+			9D723DD4183ED15F0020D12D /* PBXTextBookmark */ = 9D723DD4183ED15F0020D12D /* PBXTextBookmark */;
+			9D723DD5183ED15F0020D12D /* PBXTextBookmark */ = 9D723DD5183ED15F0020D12D /* PBXTextBookmark */;
+			9D723DD7183ED15F0020D12D /* PBXTextBookmark */ = 9D723DD7183ED15F0020D12D /* PBXTextBookmark */;
+		};
+		sourceControlManager = 9D723C6C183E78760020D12D /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	9D723C60183E78570020D12D /* GoEuro */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = GoEuro;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	9D723C6C183E78760020D12D /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	9D723C6D183E78760020D12D /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	9D723C6E183E78BC0020D12D /* GEAPIClient.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 559}}";
+			sepNavSelRange = "{270, 0}";
+			sepNavVisRange = "{0, 300}";
+		};
+	};
+	9D723C6F183E78BC0020D12D /* GEAPIClient.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 559}}";
+			sepNavSelRange = "{915, 0}";
+			sepNavVisRange = "{0, 1083}";
+			sepNavWindowFrame = "{{15, 217}, {1101, 836}}";
+		};
+	};
+	9D723CB3183E83480020D12D /* GEModel.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {439, 377}}";
+			sepNavSelRange = "{342, 0}";
+			sepNavVisRange = "{164, 355}";
+			sepNavWindowFrame = "{{84, 154}, {1101, 836}}";
+		};
+	};
+	9D723CB4183E83480020D12D /* GEModel.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {803, 1729}}";
+			sepNavSelRange = "{3885, 0}";
+			sepNavVisRange = "{3044, 571}";
+			sepNavWindowFrame = "{{38, 196}, {1101, 836}}";
+		};
+	};
+	9D723CC4183E98440020D12D /* GEAPIRequest.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {936, 841}}";
+			sepNavSelRange = "{465, 0}";
+			sepNavVisRange = "{0, 471}";
+		};
+	};
+	9D723CC5183E98440020D12D /* GEAPIRequest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {544, 403}}";
+			sepNavSelRange = "{266, 0}";
+			sepNavVisRange = "{211, 293}";
+		};
+	};
+	9D723DA9183EBD4E0020D12D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9D723CC4183E98440020D12D /* GEAPIRequest.h */;
+		name = "GEAPIRequest.h: 21";
+		rLen = 0;
+		rLoc = 465;
+		rType = 0;
+		vrLen = 471;
+		vrLoc = 0;
+	};
+	9D723DAB183EBD4E0020D12D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* GoEuroViewController.h */;
+		name = "GoEuroViewController.h: 19";
+		rLen = 20;
+		rLoc = 479;
+		rType = 0;
+		vrLen = 979;
+		vrLoc = 0;
+	};
+	9D723DAC183EBD4E0020D12D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9D723CB3183E83480020D12D /* GEModel.h */;
+		name = "GEModel.h: 11";
+		rLen = 0;
+		rLoc = 190;
+		rType = 0;
+		vrLen = 631;
+		vrLoc = 0;
+	};
+	9D723DD2183ED15F0020D12D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9D723DD3183ED15F0020D12D /* CGGeometry.h */;
+		name = "CGGeometry.h: 17";
+		rLen = 32;
+		rLoc = 278;
+		rType = 0;
+		vrLen = 1403;
+		vrLoc = 0;
+	};
+	9D723DD3183ED15F0020D12D /* CGGeometry.h */ = {
+		isa = PBXFileReference;
+		name = CGGeometry.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h;
+		sourceTree = "<absolute>";
+	};
+	9D723DD4183ED15F0020D12D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9D723CB4183E83480020D12D /* GEModel.m */;
+		name = "GEModel.m: 31";
+		rLen = 0;
+		rLoc = 687;
+		rType = 0;
+		vrLen = 1523;
+		vrLoc = 0;
+	};
+	9D723DD5183ED15F0020D12D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* GoEuroViewController.m */;
+		name = "GoEuroViewController.m: 84";
+		rLen = 0;
+		rLoc = 2392;
+		rType = 0;
+		vrLen = 1686;
+		vrLoc = 1879;
+	};
+	9D723DD7183ED15F0020D12D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* GoEuroViewController.m */;
+		name = "GoEuroViewController.m: 104";
+		rLen = 0;
+		rLoc = 2907;
+		rType = 0;
+		vrLen = 1686;
+		vrLoc = 1879;
+	};
+}
